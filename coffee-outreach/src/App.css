@@ -1,38 +1,112 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1 {
+  font-size: 2em;
+  color: #6b4e31;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.selection button,
+.coffee-options button,
+.back {
+  background-color: #6b3147;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.selection button:hover,
+.coffee-options button:hover,
+.back:hover {
+  background-color: #8b6f47;
+}
+#backToMenu {
+  background-color: #078f32;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.coffee-options button.selected {
+  background-color: #4a3723;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+}
+
+.coffee-list {
+  margin-top: 20px;
+}
+
+.coffee-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.coffee-details {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-details h3 {
+  color: #6b4e31;
+}
+
+.free {
+  font-weight: bold;
+  color: #2e7d32;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .app {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .selection button,
+  .coffee-options button,
+  .back {
+    width: 100%;
+    padding: 12px;
   }
 }
