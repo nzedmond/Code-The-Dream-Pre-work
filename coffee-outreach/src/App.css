@@ -93,7 +93,7 @@ header p {
   margin-top: 10px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 500px) {
   .app {
     padding: 10px;
